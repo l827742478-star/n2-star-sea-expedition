@@ -1,20 +1,21 @@
 # N2 星海远征数据清点
 
-本清点由用户提供的 Notion ExportBlock 压缩包生成；网页只接入词汇、语法和语境应用记录。
+本清点由用户提供的 Notion ExportBlock 压缩包生成；网页通过适配层接入词汇、语法、语境应用和听力研修记录。
 
 ## 接入文件
 
 | 数据源 | 相对路径 | 记录数 | 类型 | 字段摘要 |
 | --- | --- | ---: | --- | --- |
-| 日语N1 N2固定搭配数据库 | `work/imports/ditto1/Private & Shared/日语N1 N2固定搭配数据库 0148c6c42f42404ba3bafb605274fee1.csv` | 684 | fixed | No.、核心名词、关键助词、搭配动词、完整短语、假名注音、中文释义、例句 |
-| 高频N2表达 | `work/imports/ditto4/Private & Shared/高频N2表达 212382405e5180f59ac8f99f7a9c52e0.csv` | 1070 | n2 | 编号、标题、中文解释、接续、类型、例句、标签、出题频率 |
-| 日本大学面试神器 | `work/imports/ditto3nested/Private & Shared/日本大学面试神器 25ef804a21918060a8bdf16fc564de9a.csv` | 200 | interview | 编号、题目/问题、日语参考回答、中文翻译、替换关键词、结构说明、使用场景、难度等级 |
+| 日语N1 N2固定搭配数据库 | `work/imports/ditto1/Private & Shared/日语N1 N2固定搭配数据库 0148c6c42f42404ba3bafb605274fee1.csv` | 684 | fixed | No.、核心名词、关键助词、搭配动词、完整短语、假名注音、中文释义、例句、场景标签、JLPT等级、常见错误 |
+| 高频N2表达 | `work/imports/ditto4/Private & Shared/高频N2表达 212382405e5180f59ac8f99f7a9c52e0.csv` | 1070 | n2 | 编号、标题、中文解释、接续、类型、例句、标签、出题频率、难度评分、熟练度评分 |
+| 日本大学面试神器 | `work/imports/ditto3nested/Private & Shared/日本大学面试神器 25ef804a21918060a8bdf16fc564de9a.csv` | 200 | interview | 编号、题目/问题、日语参考回答、中文翻译、替换关键词、结构说明、使用场景、难度等级、类型分类、使用频率 |
+| 日语听力提分神器 | `work/imports/ditto2/Private & Shared/日语听力提分神器 6332c4a61c6d4dbbba9b36b01de469fb_all.csv` | 200 | listening | 卡片名称、一句话记忆结论、中文翻译、出题人真正想让你抓的点、听力原文（日文）、场景、场景类型、大多数人会听错的点、序号、模块、正确听力策略、难度级别、音频 |
 
 ## 最终接入记录
 
-- 接入总数：1954
-- 类型分布：{'grammar': 1193, 'vocabulary': 377, 'mixed': 384}
-- 来源分布：{'日语N1 N2固定搭配数据库': 684, '高频N2表达': 1070, '日本大学面试神器': 200}
+- 接入总数：2154
+- 类型分布：{'grammar': 1193, 'vocabulary': 377, 'mixed': 384, 'listening': 200}
+- 来源分布：{'日语N1 N2固定搭配数据库': 684, '高频N2表达': 1070, '日本大学面试神器': 200, '日语听力提分神器': 200}
 - 重复 ID：无
 - 空字段：保留在 `metadata`，界面按字段缺失显示空状态，不补写用户数据。
 - 语境应用数据：大学面试数据单独标注，不宣传为 JLPT N2 真题。
@@ -25,4 +26,5 @@
 - `grammar` → 句式高城
 - `mixed` → 语境回廊
 - `reading` → 篇章书塔（当前数据源没有阅读篇章，界面显示等待数据）
+- `listening` → 听觉星廊，音频文件复制到 `public/audio/listening/` 并以稳定 ID 关联
 - 全部接入记录 → 终局星门的综合抽取池
