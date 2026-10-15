@@ -1,6 +1,6 @@
 # N2 星海远征数据清点
 
-本清点由用户提供的 Notion ExportBlock 压缩包生成。听力数据包已按用户要求排除，不进入网页、统计、奖励或关卡。
+本清点由用户提供的 Notion ExportBlock 压缩包生成；网页只接入词汇、语法和语境应用记录。
 
 ## 接入文件
 
@@ -9,7 +9,6 @@
 | 日语N1 N2固定搭配数据库 | `work/imports/ditto1/Private & Shared/日语N1 N2固定搭配数据库 0148c6c42f42404ba3bafb605274fee1.csv` | 684 | fixed | No.、核心名词、关键助词、搭配动词、完整短语、假名注音、中文释义、例句 |
 | 高频N2表达 | `work/imports/ditto4/Private & Shared/高频N2表达 212382405e5180f59ac8f99f7a9c52e0.csv` | 1070 | n2 | 编号、标题、中文解释、接续、类型、例句、标签、出题频率 |
 | 日本大学面试神器 | `work/imports/ditto3nested/Private & Shared/日本大学面试神器 25ef804a21918060a8bdf16fc564de9a.csv` | 200 | interview | 编号、题目/问题、日语参考回答、中文翻译、替换关键词、结构说明、使用场景、难度等级 |
-| 日语听力提分神器 | `work/imports/ditto2/Private & Shared/日语听力提分神器 6332c4a61c6d4dbbba9b36b01de469fb.csv` | 200 | excluded；按用户要求不接入闯关、统计、奖励或页面 | 序号、卡片名称、音频、场景类型、难度级别、听力原文（日文）、中文翻译、出题人真正想让你抓的点 |
 
 ## 最终接入记录
 
